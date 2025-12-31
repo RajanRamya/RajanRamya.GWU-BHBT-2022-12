@@ -440,6 +440,23 @@ body.dark .hero-overlay {
   background: var(--card);
 }
 
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.contact-details p {
+  margin: 0;
+}
+
+.contact-details i {
+  margin-right: 0.5rem;
+  color: var(--accent);
+}
+
 .section {
   padding: 4rem 0;
 }
@@ -544,22 +561,6 @@ body.dark .hero-overlay {
 .skill-category h3 {
   margin-bottom: 1rem;
   color: var(--text);
-}
-
-.contact-details {
-  margin-bottom: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.contact-details p {
-  margin: 0;
-}
-
-.contact-details i {
-  margin-right: 0.5rem;
-  color: var(--accent);
 }
 
 /* Animations */
