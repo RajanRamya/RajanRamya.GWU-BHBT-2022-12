@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RAJAN RAMYA — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    /* 3D Animations */
+    .card {
+      transform-style: preserve-3d;
+      transform: perspective(1000px);
+      transition: transform 0.1s;
+    }
+    
+    .card > * {
+      transform: translateZ(0);
+      transition: transform 0.3s;
+    }
+    
+    .card:hover > * {
+      transform: translateZ(30px);
+    }
+
+    /* Floating Profile Picture */
+    .profile-pic {
+      animation: float 6s ease-in-out infinite;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* 3D Scroll Entrance */
+    .fade-in {
+      opacity: 0;
+      transform: perspective(1000px) rotateX(20deg) translateY(50px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: perspective(1000px) rotateX(0) translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#home">RAJAN RAMYA</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+      <nav id="nav" class="nav">
+        <a href="#profile">Profile</a>
+        <a href="#education">Education</a>
+        <a href="#training">Training</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-image">
+          <img src="c:\Users\acer\Desktop\IMG-20251214-WA0268.jpg" alt="RAJAN RAMYA" class="profile-pic" />
+        </div>
+        <div class="hero-text">
+          <h1>Hi, I’m RAJAN RAMYA</h1>
+          <p id="tagline" class="tagline">Passionate learner, future professional in Biomedical Technology.</p>
+          <div class="hero-buttons">
+            <a class="btn primary" href="#profile">View Profile</a>
+            <a class="btn secondary" href="cv.pdf" download>Download CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="profile" class="container section fade-in">
+      <h2>Profile Summary</h2>
+      <p>A dedicated student pursuing a Bachelor in Health Science Hons. (Biomedical Technology), with a keen interest in medical equipment, electronics, and web development. Eager to apply knowledge in real-world healthcare settings.</p>
+    </section>
+
+    <section id="education" class="container section fade-in">
+      <h2>Education</h2>
+      <div class="education-grid">
+        <div class="education-item">
+          <h3>Bachelor in Health Science Hons. (Biomedical Technology)</h3>
+          <p>Currently pursuing at Gampaha wickramarachchi university of indigenious medicine, focusing on biomedical engineering principles, medical devices, and healthcare technology.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="practical" class="container section fade-in">
+      <h2>Practical Work</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <i class="fas fa-screwdriver"></i>
+          <h3>Medical Equipment</h3>
+          <p>Hands-on experience in assembling, maintaining, and troubleshooting medical devices.</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-microchip"></i>
+          <h3>Circuit Design</h3>
+          <p>Designing and testing circuits using Arduino and various biomedical sensors.</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Web Development</h3>
+          <p>Building functional web projects and portfolios using modern web technologies.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="training" class="container section fade-in">
+      <h2>Training</h2>
+      <div class="training-grid">
+        <div class="training-item">
+          <h3>BME Training Programme</h3>
+          <p>Currently undergoing Biomedical Engineering training at Navaloka Hospital, Colombo. Gaining practical skills in medical equipment maintenance and hospital operations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="container section fade-in">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Technical Skills</h3>
+          <div class="skills">
+            <div class="skill-item">
+              <i class="fas fa-tools"></i>
+              <div class="skill-details">
+                <span>Medical Equipment Basics</span>
+                <div class="progress-bar">
+                  <div class="progress" data-width="80"></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-microchip"></i>
+              <div class="skill-details">
+                <span>Arduino & Circuit Knowledge</span>
+                <div class="progress-bar">
+                  <div class="progress" data-width="75"></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-code"></i>
+              <div class="skill-details">
+                <span>Web Basics (HTML, CSS, JavaScript)</span>
+                <div class="progress-bar">
+                  <div class="progress" data-width="70"></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-file-alt"></i>
+              <div class="skill-details">
+                <span>Documentation & Reporting</span>
+                <div class="progress-bar">
+                  <div class="progress" data-width="85"></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-presentation"></i>
+              <div class="skill-details">
+                <span>Presentation Skills</span>
+                <div class="progress-bar">
+                  <div class="progress" data-width="75"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Soft Skills</h3>
+          <div class="skills">
+            <div class="skill-item">
+              <i class="fas fa-comments"></i>
+              <div class="skill-details">
+                <span>Communication</span>
+                <div class="progress-bar">
+                  <div class="progress" data-width="90"></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-users"></i>
+              <div class="skill-details">
+                <span>Teamwork</span>
+                <div class="progress-bar">
+                  <div class="progress" data-width="85"></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-brain"></i>
+              <div class="skill-details">
+                <span>Problem Solving</span>
+                <div class="progress-bar">
+                  <div class="progress" data-width="80"></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-graduation-cap"></i>
+              <div class="skill-details">
+                <span>Willingness to Learn</span>
+                <div class="progress-bar">
+                  <div class="progress" data-width="95"></div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-clock"></i>
+              <div class="skill-details">
+                <span>Time Management</span>
+                <div class="progress-bar">
+                  <div class="progress" data-width="85"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="interests" class="container section fade-in">
+      <h2>Interests</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <i class="fas fa-robot"></i>
+          <h3>New Technologies</h3>
+          <p>Exploring emerging tech in healthcare and automation.</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-book-medical"></i>
+          <h3>Medical Advancements</h3>
+          <p>Reading about the latest breakthroughs in biomedical science.</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-code-branch"></i>
+          <h3>Coding</h3>
+          <p>Developing personal coding projects and learning new languages.</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-users"></i>
+          <h3>Team Activities</h3>
+          <p>Participating in collaborative projects and community events.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="strengths" class="container section fade-in">
+      <h2>Strengths</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <i class="fas fa-chart-line"></i>
+          <h3>Analytical Skills</h3>
+          <p>Strong ability to analyze problems and find effective solutions.</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-clipboard-check"></i>
+          <h3>Attention to Detail</h3>
+          <p>Meticulous in technical work, documentation, and reporting.</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-bolt"></i>
+          <h3>Adaptability</h3>
+          <p>Quick learner who adapts easily to new tools and environments.</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-comments"></i>
+          <h3>Communication</h3>
+          <p>Effective communicator in both technical and team settings.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="objectives" class="container section fade-in">
+      <h2>Career Objectives</h2>
+      <div class="objective-card">
+        <p>To secure a position as a Biomedical Engineer where I can utilize my skills in medical technology to contribute to innovative healthcare solutions and continuous professional development.</p>
+      </div>
+    </section>
+
+    <section id="projects" class="container projects fade-in">
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1553406830-ef2513450d76?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Arduino Project" class="project-img" />
+          <h3>Arduino-Based Medical Device</h3>
+          <p>Developed a prototype for monitoring vital signs using Arduino and sensors.</p>
+          <a class="link" href="#">View →</a>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Web Portfolio" class="project-img" />
+          <h3>Web Portfolio</h3>
+          <p>Created a personal portfolio website using HTML, CSS, and JavaScript.</p>
+          <a class="link" href="#">View →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container contact fade-in">
+      <h2>Contact</h2>
+      <div class="contact-details">
+        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:rajanramyaramya@gmail.com">rajanramyaramya@gmail.com</a></p>
+        <p><i class="fas fa-phone"></i> Phone: 0778565697</p>
+        <p><i class="fas fa-map-marker-alt"></i> Location: Kandy, Sri Lanka</p>
+      </div>
+      <form id="contact-form">
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Message
+          <textarea name="message" required></textarea>
+        </label>
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© RAJAN RAMYA — Built with ❤️</small>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // 3D Tilt Effect for Cards
+    const cards = document.querySelectorAll('.card');
+    
+    cards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = ((y - centerY) / centerY) * -10;
+        const rotateY = ((x - centerX) / centerX) * 10;
+        
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      });
+      
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+      });
+    });
+
+    // Ensure fade-in elements become visible on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
