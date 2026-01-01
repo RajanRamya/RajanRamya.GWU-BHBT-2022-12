@@ -8,18 +8,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <style>
     /* 3D Animations */
-    .card {
+    .card, section {
       transform-style: preserve-3d;
       transform: perspective(1000px);
       transition: transform 0.1s;
     }
     
-    .card > * {
+    .card > *, section > * {
       transform: translateZ(0);
       transition: transform 0.3s;
     }
     
-    .card:hover > * {
+    .card:hover > *, section:hover > * {
       transform: translateZ(30px);
     }
 
@@ -61,6 +61,7 @@
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+        <a href="cv.pdf" download>CV</a>
       </nav>
     </div>
   </header>
@@ -70,7 +71,7 @@
       <div class="hero-overlay"></div>
       <div class="container hero-content">
         <div class="hero-image">
-          <img src="C:\Users\acer\Documents\GitHub\RajanRamya.GWU-BHBT-2022-12\Image\ram.jpg" alt="RAJAN RAMYA" class="profile-pic" />
+          <img src="https://imgur.com/J3N6JCC" alt="RAJAN RAMYA" class="profile-pic" />
         </div>
         <div class="hero-text">
           <h1>Hi, I’m RAJAN RAMYA</h1>
@@ -334,6 +335,7 @@
         <p><i class="fas fa-envelope"></i> Email: <a href="mailto:rajanramyaramya@gmail.com">rajanramyaramya@gmail.com</a></p>
         <p><i class="fas fa-phone"></i> Phone: 0778565697</p>
         <p><i class="fas fa-map-marker-alt"></i> Location: Kandy, Sri Lanka</p>
+        <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/RajanRamya/RajanRamya.GWU-BHBT-2022-12" target="_blank">View Repository</a></p>
       </div>
       <small>© RAJAN RAMYA — Built with ❤️</small>
     </div>
@@ -342,7 +344,7 @@
   <script src="main.js"></script>
   <script>
     // 3D Tilt Effect for Cards
-    const cards = document.querySelectorAll('.card');
+    const cards = document.querySelectorAll('.card, section');
     
     cards.forEach(card => {
       card.addEventListener('mousemove', (e) => {
