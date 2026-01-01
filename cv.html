@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Rajan Ramya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 210mm; /* A4 width */
+            margin: 0 auto;
+            padding: 20mm;
+            background: white;
+            box-sizing: border-box;
+        }
+        @media screen {
+            body {
+                box-shadow: 0 0 20px rgba(0,0,0,0.1);
+                margin: 20px auto;
+            }
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .header-text h1 {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 2.5em;
+            text-transform: uppercase;
+        }
+        .header-text h2 {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+            color: var(--accent-color);
+            font-weight: normal;
+        }
+        .contact-info {
+            text-align: right;
+            font-size: 0.9em;
+        }
+        .contact-info p {
+            margin: 2px 0;
+        }
+        .contact-info i {
+            color: var(--accent-color);
+            width: 20px;
+            text-align: center;
+        }
+        section {
+            margin-bottom: 25px;
+        }
+        h3.section-title {
+            color: var(--primary-color);
+            text-transform: uppercase;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        .entry {
+            margin-bottom: 15px;
+        }
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        .entry-title {
+            font-weight: bold;
+            font-size: 1.05em;
+        }
+        .entry-date {
+            color: #666;
+            font-style: italic;
+        }
+        .entry-subtitle {
+            color: var(--accent-color);
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .skill-category strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+        ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 3px;
+        }
+        .print-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.2s;
+        }
+        .print-btn:hover {
+            transform: translateY(-2px);
+        }
+        @media print {
+            .print-btn { display: none; }
+            body { margin: 0; padding: 15mm; box-shadow: none; }
+            a { text-decoration: none; color: inherit; }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()">
+        <i class="fas fa-print"></i> Save as PDF
+    </button>
+
+    <header class="header">
+        <div class="header-text">
+            <h1>Rajan Ramya</h1>
+            <h2>Biomedical Technology Student</h2>
+        </div>
+        <div class="contact-info">
+            <p><a href="mailto:rajanramyaramya@gmail.com">rajanramyaramya@gmail.com</a> <i class="fas fa-envelope"></i></p>
+            <p>0778565697 <i class="fas fa-phone"></i></p>
+            <p>Kandy, Sri Lanka <i class="fas fa-map-marker-alt"></i></p>
+            <p>github.com/RajanRamya <i class="fab fa-github"></i></p>
+        </div>
+    </header>
+
+    <section>
+        <h3 class="section-title">Profile Summary</h3>
+        <p>A dedicated student pursuing a Bachelor in Health Science Hons. (Biomedical Technology), with a keen interest in medical equipment, electronics, and web development. Eager to apply knowledge in real-world healthcare settings to contribute to innovative healthcare solutions.</p>
+    </section>
+
+    <section>
+        <h3 class="section-title">Education</h3>
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Bachelor in Health Science Hons. (Biomedical Technology)</span>
+                <span class="entry-date">Present</span>
+            </div>
+            <div class="entry-subtitle">Gampaha Wickramarachchi University of Indigenous Medicine</div>
+            <p>Focusing on biomedical engineering principles, medical devices, and healthcare technology.</p>
+        </div>
+    </section>
+
+    <section>
+        <h3 class="section-title">Training & Experience</h3>
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Biomedical Engineering Trainee</span>
+                <span class="entry-date">Present</span>
+            </div>
+            <div class="entry-subtitle">Navaloka Hospital, Colombo</div>
+            <ul>
+                <li>Gaining practical skills in medical equipment maintenance and hospital operations.</li>
+                <li>Hands-on experience in assembling and troubleshooting medical devices.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h3 class="section-title">Skills</h3>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <strong>Technical Skills</strong>
+                <ul>
+                    <li>Medical Equipment Maintenance</li>
+                    <li>Arduino & Circuit Design</li>
+                    <li>Biomedical Sensors</li>
+                    <li>Web Development (HTML, CSS, JS)</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <strong>Soft Skills</strong>
+                <ul>
+                    <li>Communication & Teamwork</li>
+                    <li>Problem Solving</li>
+                    <li>Documentation & Reporting</li>
+                    <li>Time Management</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3 class="section-title">Projects</h3>
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Arduino-Based Medical Device</span>
+            </div>
+            <p>Developed a prototype for monitoring vital signs using Arduino and sensors, demonstrating practical application of circuit design and biomedical principles.</p>
+        </div>
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Web Portfolio</span>
+            </div>
+            <p>Designed and built a personal portfolio website to showcase academic and technical achievements using modern web technologies.</p>
+        </div>
+    </section>
+</body>
+</html>
